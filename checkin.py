@@ -24,7 +24,7 @@ def main():
     }
     info = s.info()
     for key, value in s.items():
-        print "%s = %s" % (key, value)
+        print("%s = %s" % (key, value))
     response = s.get(surl,headers=headers)
     netdiskBonus = response.json()['netdiskBonus']
     if(response.json()['isSign'] == "false"):
