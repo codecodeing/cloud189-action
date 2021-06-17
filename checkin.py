@@ -22,6 +22,7 @@ def main():
         "Host" : "m.cloud.189.cn",
         "Accept-Encoding" : "gzip, deflate",
     }
+    print(s)
     response = s.get(surl,headers=headers)
     netdiskBonus = response.json()['netdiskBonus']
     if(response.json()['isSign'] == "false"):
