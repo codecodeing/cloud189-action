@@ -22,7 +22,9 @@ def main():
         "Host" : "m.cloud.189.cn",
         "Accept-Encoding" : "gzip, deflate",
     }
-    print '\n'.join(['%s:%s' % item for item in s.__dict__.items()])
+    info = s.info()
+    for key, value in s.items():
+        print "%s = %s" % (key, value)
     response = s.get(surl,headers=headers)
     netdiskBonus = response.json()['netdiskBonus']
     if(response.json()['isSign'] == "false"):
